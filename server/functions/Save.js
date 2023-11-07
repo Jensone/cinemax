@@ -4,7 +4,7 @@ const Save = (movieID) =>
 {
     let status = false // On définit une variable de statut pour savoir si tout s'est bien passé
     let favoritesList = fs.readFileSync('./data.json', 'utf8') // On récupère la liste des favoris
-    let favorites = JSON.parse(favoritesList).favorite // On parse la liste des favoris
+    let favorites = JSON.parse(favoritesList).favorites // On parse la liste des favoris
     const newFavorite = { id: movieID, movie: movieID } // On crée un nouvel objet film
     favorites.push(newFavorite) // On ajoute le nouveau film à la liste des favoris
     try {

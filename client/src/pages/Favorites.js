@@ -14,7 +14,7 @@ const Favorites = () => {
         fetch('http://localhost:3002/api/favorites')
             .then(res => res.json())
             .then(data => setFavorites(data.favorites))
-    })
+    }, [])
     
     return (
         <>
